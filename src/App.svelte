@@ -1,7 +1,7 @@
 <div class="body">
   <h1>Autó Hatótáv Kalkulátor</h1>
 
-  <!-- <img src={car} alt="car-icon"> -->
+  <img src={car} alt="car-icon">
    
   <div class="beviteli-mezok">
     <label for="tankoltUzemanyag">Tankolt üzemanyag mennyisége (liter):</label>
