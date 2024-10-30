@@ -19,7 +19,7 @@
   </div>
   
   <button on:click={szamolas}>Számolás</button>
-  
+  <button on:click={oldalFrissitese}>Frissítés</button>
 
   {#if atlagFogyasztas > 0 && tankoltUzemanyag > 0}
     <div class="eredmeny">
@@ -28,6 +28,7 @@
   {/if}
 </div>
 <script>
+  
   import car from './assets/car-icon.png';
   let tankoltUzemanyag = 0;
   let megtettUt = 0;
@@ -38,6 +39,9 @@
     if (atlagFogyasztas > 0) {
       megtehetoTav = (tankoltUzemanyag / atlagFogyasztas) * 100;
     }
+  }
+  function oldalFrissitese() {
+    location.reload();
   }
 </script>
 
