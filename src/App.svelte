@@ -1,8 +1,7 @@
-
 <div class="body">
   <h1>Autó Hatótáv Kalkulátor</h1>
-  <img src="./src/assets/car-icon.png" alt="car">
-  
+
+  <img src="{car}" alt="car-icon">
   <div class="beviteli-mezok">
     <label for="tankoltUzemanyag">Tankolt üzemanyag mennyisége (liter):</label>
     <input type="number" bind:value={tankoltUzemanyag} id="tankoltUzemanyag" min="0" />
@@ -19,6 +18,7 @@
   </div>
   
   <button on:click={szamolas}>Számolás</button>
+  
 
   {#if atlagFogyasztas > 0 && tankoltUzemanyag > 0}
     <div class="eredmeny">
@@ -26,11 +26,8 @@
     </div>
   {/if}
 </div>
-<div>
-  
-</div>
-
 <script>
+  import car from './assets/car-icon.png';
   let tankoltUzemanyag = 0;
   let megtettUt = 0;
   let atlagFogyasztas = 0;
@@ -56,6 +53,7 @@
   }
   img {
     border-radius: 25px;
+    width: 100px;
       
   }
   .beviteli-mezok {
